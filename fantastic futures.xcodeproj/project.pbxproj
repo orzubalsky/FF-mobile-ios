@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0918018F1546230C00EBD2AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0918018E1546230C00EBD2AE /* UIKit.framework */; };
+		091801911546230C00EBD2AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091801901546230C00EBD2AE /* Foundation.framework */; };
+		091801931546230C00EBD2AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091801921546230C00EBD2AE /* CoreGraphics.framework */; };
+		091801991546230C00EBD2AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 091801971546230C00EBD2AE /* InfoPlist.strings */; };
+		0918019B1546230C00EBD2AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0918019A1546230C00EBD2AE /* main.m */; };
+		0918019F1546230C00EBD2AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0918019E1546230C00EBD2AE /* AppDelegate.m */; };
+		091801A21546230C00EBD2AE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 091801A01546230C00EBD2AE /* MainStoryboard.storyboard */; };
+		091801A51546230C00EBD2AE /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 091801A41546230C00EBD2AE /* FirstViewController.m */; };
+		091801A71546230C00EBD2AE /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 091801A61546230C00EBD2AE /* first.png */; };
+		091801A91546230C00EBD2AE /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 091801A81546230C00EBD2AE /* first@2x.png */; };
+		091801AC1546230C00EBD2AE /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 091801AB1546230C00EBD2AE /* SecondViewController.m */; };
+		091801AE1546230C00EBD2AE /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 091801AD1546230C00EBD2AE /* second.png */; };
+		091801B01546230C00EBD2AE /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 091801AF1546230C00EBD2AE /* second@2x.png */; };
+		091801B81546230D00EBD2AE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091801B71546230D00EBD2AE /* SenTestingKit.framework */; };
+		091801B91546230D00EBD2AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0918018E1546230C00EBD2AE /* UIKit.framework */; };
+		091801BA1546230D00EBD2AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091801901546230C00EBD2AE /* Foundation.framework */; };
+		091801C21546230D00EBD2AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 091801C01546230D00EBD2AE /* InfoPlist.strings */; };
+		091801C51546230D00EBD2AE /* fantastic_futuresTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 091801C41546230D00EBD2AE /* fantastic_futuresTests.m */; };
+		091801D4154628DA00EBD2AE /* Playable.m in Sources */ = {isa = PBXBuildFile; fileRef = 091801D3154628DA00EBD2AE /* Playable.m */; };
+		091801D7154628FD00EBD2AE /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = 091801D6154628FD00EBD2AE /* Sound.m */; };
+		0928036A15588BAC0043E527 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0928035F15588BAB0043E527 /* SBJsonWriter.m */; };
+		0928036B15588BAC0043E527 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0928036115588BAB0043E527 /* SBJsonParser.m */; };
+		0928036C15588BAC0043E527 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0928036315588BAB0043E527 /* SBJsonBase.m */; };
+		0928036D15588BAC0043E527 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 0928036515588BAB0043E527 /* NSString+SBJSON.m */; };
+		0928036E15588BAC0043E527 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 0928036715588BAB0043E527 /* NSObject+SBJSON.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		091801BB1546230D00EBD2AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 091801811546230C00EBD2AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 091801891546230C00EBD2AE;
+			remoteInfo = "fantastic futures";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0918018A1546230C00EBD2AE /* fantastic futures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fantastic futures.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0918018E1546230C00EBD2AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		091801901546230C00EBD2AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		091801921546230C00EBD2AE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		091801961546230C00EBD2AE /* fantastic futures-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "fantastic futures-Info.plist"; sourceTree = "<group>"; };
+		091801981546230C00EBD2AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0918019A1546230C00EBD2AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0918019C1546230C00EBD2AE /* fantastic futures-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fantastic futures-Prefix.pch"; sourceTree = "<group>"; };
+		0918019D1546230C00EBD2AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0918019E1546230C00EBD2AE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		091801A11546230C00EBD2AE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		091801A31546230C00EBD2AE /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		091801A41546230C00EBD2AE /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		091801A61546230C00EBD2AE /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		091801A81546230C00EBD2AE /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		091801AA1546230C00EBD2AE /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		091801AB1546230C00EBD2AE /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		091801AD1546230C00EBD2AE /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		091801AF1546230C00EBD2AE /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		091801B61546230D00EBD2AE /* fantastic futuresTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fantastic futuresTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		091801B71546230D00EBD2AE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		091801BF1546230D00EBD2AE /* fantastic futuresTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "fantastic futuresTests-Info.plist"; sourceTree = "<group>"; };
+		091801C11546230D00EBD2AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		091801C31546230D00EBD2AE /* fantastic_futuresTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fantastic_futuresTests.h; sourceTree = "<group>"; };
+		091801C41546230D00EBD2AE /* fantastic_futuresTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fantastic_futuresTests.m; sourceTree = "<group>"; };
+		091801D2154628DA00EBD2AE /* Playable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Playable.h; sourceTree = "<group>"; };
+		091801D3154628DA00EBD2AE /* Playable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Playable.m; sourceTree = "<group>"; };
+		091801D5154628FD00EBD2AE /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
+		091801D6154628FD00EBD2AE /* Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sound.m; sourceTree = "<group>"; };
+		0928035F15588BAB0043E527 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		0928036015588BAB0043E527 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		0928036115588BAB0043E527 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		0928036215588BAB0043E527 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		0928036315588BAB0043E527 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		0928036415588BAB0043E527 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		0928036515588BAB0043E527 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		0928036615588BAB0043E527 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		0928036715588BAB0043E527 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		0928036815588BAB0043E527 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		0928036915588BAC0043E527 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		091801871546230C00EBD2AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0918018F1546230C00EBD2AE /* UIKit.framework in Frameworks */,
+				091801911546230C00EBD2AE /* Foundation.framework in Frameworks */,
+				091801931546230C00EBD2AE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		091801B21546230C00EBD2AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				091801B81546230D00EBD2AE /* SenTestingKit.framework in Frameworks */,
+				091801B91546230D00EBD2AE /* UIKit.framework in Frameworks */,
+				091801BA1546230D00EBD2AE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0918017F1546230C00EBD2AE = {
+			isa = PBXGroup;
+			children = (
+				091801941546230C00EBD2AE /* fantastic futures */,
+				091801BD1546230D00EBD2AE /* fantastic futuresTests */,
+				0918018D1546230C00EBD2AE /* Frameworks */,
+				0918018B1546230C00EBD2AE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0918018B1546230C00EBD2AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0918018A1546230C00EBD2AE /* fantastic futures.app */,
+				091801B61546230D00EBD2AE /* fantastic futuresTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0918018D1546230C00EBD2AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0918018E1546230C00EBD2AE /* UIKit.framework */,
+				091801901546230C00EBD2AE /* Foundation.framework */,
+				091801921546230C00EBD2AE /* CoreGraphics.framework */,
+				091801B71546230D00EBD2AE /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		091801941546230C00EBD2AE /* fantastic futures */ = {
+			isa = PBXGroup;
+			children = (
+				0928035F15588BAB0043E527 /* SBJsonWriter.m */,
+				0928036015588BAB0043E527 /* SBJsonWriter.h */,
+				0928036115588BAB0043E527 /* SBJsonParser.m */,
+				0928036215588BAB0043E527 /* SBJsonParser.h */,
+				0928036315588BAB0043E527 /* SBJsonBase.m */,
+				0928036415588BAB0043E527 /* SBJsonBase.h */,
+				0928036515588BAB0043E527 /* NSString+SBJSON.m */,
+				0928036615588BAB0043E527 /* NSString+SBJSON.h */,
+				0928036715588BAB0043E527 /* NSObject+SBJSON.m */,
+				0928036815588BAB0043E527 /* NSObject+SBJSON.h */,
+				0928036915588BAC0043E527 /* JSON.h */,
+				0918019D1546230C00EBD2AE /* AppDelegate.h */,
+				0918019E1546230C00EBD2AE /* AppDelegate.m */,
+				091801A01546230C00EBD2AE /* MainStoryboard.storyboard */,
+				091801A31546230C00EBD2AE /* FirstViewController.h */,
+				091801A41546230C00EBD2AE /* FirstViewController.m */,
+				091801A61546230C00EBD2AE /* first.png */,
+				091801A81546230C00EBD2AE /* first@2x.png */,
+				091801AA1546230C00EBD2AE /* SecondViewController.h */,
+				091801AB1546230C00EBD2AE /* SecondViewController.m */,
+				091801AD1546230C00EBD2AE /* second.png */,
+				091801AF1546230C00EBD2AE /* second@2x.png */,
+				091801951546230C00EBD2AE /* Supporting Files */,
+				091801D2154628DA00EBD2AE /* Playable.h */,
+				091801D5154628FD00EBD2AE /* Sound.h */,
+				091801D6154628FD00EBD2AE /* Sound.m */,
+				091801D3154628DA00EBD2AE /* Playable.m */,
+			);
+			path = "fantastic futures";
+			sourceTree = "<group>";
+		};
+		091801951546230C00EBD2AE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				091801961546230C00EBD2AE /* fantastic futures-Info.plist */,
+				091801971546230C00EBD2AE /* InfoPlist.strings */,
+				0918019A1546230C00EBD2AE /* main.m */,
+				0918019C1546230C00EBD2AE /* fantastic futures-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		091801BD1546230D00EBD2AE /* fantastic futuresTests */ = {
+			isa = PBXGroup;
+			children = (
+				091801C31546230D00EBD2AE /* fantastic_futuresTests.h */,
+				091801C41546230D00EBD2AE /* fantastic_futuresTests.m */,
+				091801BE1546230D00EBD2AE /* Supporting Files */,
+			);
+			path = "fantastic futuresTests";
+			sourceTree = "<group>";
+		};
+		091801BE1546230D00EBD2AE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				091801BF1546230D00EBD2AE /* fantastic futuresTests-Info.plist */,
+				091801C01546230D00EBD2AE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		091801891546230C00EBD2AE /* fantastic futures */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 091801C81546230D00EBD2AE /* Build configuration list for PBXNativeTarget "fantastic futures" */;
+			buildPhases = (
+				091801861546230C00EBD2AE /* Sources */,
+				091801871546230C00EBD2AE /* Frameworks */,
+				091801881546230C00EBD2AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "fantastic futures";
+			productName = "fantastic futures";
+			productReference = 0918018A1546230C00EBD2AE /* fantastic futures.app */;
+			productType = "com.apple.product-type.application";
+		};
+		091801B51546230C00EBD2AE /* fantastic futuresTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 091801CB1546230D00EBD2AE /* Build configuration list for PBXNativeTarget "fantastic futuresTests" */;
+			buildPhases = (
+				091801B11546230C00EBD2AE /* Sources */,
+				091801B21546230C00EBD2AE /* Frameworks */,
+				091801B31546230C00EBD2AE /* Resources */,
+				091801B41546230C00EBD2AE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				091801BC1546230D00EBD2AE /* PBXTargetDependency */,
+			);
+			name = "fantastic futuresTests";
+			productName = "fantastic futuresTests";
+			productReference = 091801B61546230D00EBD2AE /* fantastic futuresTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		091801811546230C00EBD2AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 091801841546230C00EBD2AE /* Build configuration list for PBXProject "fantastic futures" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0918017F1546230C00EBD2AE;
+			productRefGroup = 0918018B1546230C00EBD2AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				091801891546230C00EBD2AE /* fantastic futures */,
+				091801B51546230C00EBD2AE /* fantastic futuresTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		091801881546230C00EBD2AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				091801991546230C00EBD2AE /* InfoPlist.strings in Resources */,
+				091801A21546230C00EBD2AE /* MainStoryboard.storyboard in Resources */,
+				091801A71546230C00EBD2AE /* first.png in Resources */,
+				091801A91546230C00EBD2AE /* first@2x.png in Resources */,
+				091801AE1546230C00EBD2AE /* second.png in Resources */,
+				091801B01546230C00EBD2AE /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		091801B31546230C00EBD2AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				091801C21546230D00EBD2AE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		091801B41546230C00EBD2AE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		091801861546230C00EBD2AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0918019B1546230C00EBD2AE /* main.m in Sources */,
+				0918019F1546230C00EBD2AE /* AppDelegate.m in Sources */,
+				091801A51546230C00EBD2AE /* FirstViewController.m in Sources */,
+				091801AC1546230C00EBD2AE /* SecondViewController.m in Sources */,
+				091801D4154628DA00EBD2AE /* Playable.m in Sources */,
+				091801D7154628FD00EBD2AE /* Sound.m in Sources */,
+				0928036A15588BAC0043E527 /* SBJsonWriter.m in Sources */,
+				0928036B15588BAC0043E527 /* SBJsonParser.m in Sources */,
+				0928036C15588BAC0043E527 /* SBJsonBase.m in Sources */,
+				0928036D15588BAC0043E527 /* NSString+SBJSON.m in Sources */,
+				0928036E15588BAC0043E527 /* NSObject+SBJSON.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		091801B11546230C00EBD2AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				091801C51546230D00EBD2AE /* fantastic_futuresTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		091801BC1546230D00EBD2AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 091801891546230C00EBD2AE /* fantastic futures */;
+			targetProxy = 091801BB1546230D00EBD2AE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		091801971546230C00EBD2AE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				091801981546230C00EBD2AE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		091801A01546230C00EBD2AE /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				091801A11546230C00EBD2AE /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		091801C01546230D00EBD2AE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				091801C11546230D00EBD2AE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		091801C61546230D00EBD2AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		091801C71546230D00EBD2AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		091801C91546230D00EBD2AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "fantastic futures/fantastic futures-Prefix.pch";
+				INFOPLIST_FILE = "fantastic futures/fantastic futures-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		091801CA1546230D00EBD2AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "fantastic futures/fantastic futures-Prefix.pch";
+				INFOPLIST_FILE = "fantastic futures/fantastic futures-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		091801CC1546230D00EBD2AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/fantastic futures.app/fantastic futures";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "fantastic futures/fantastic futures-Prefix.pch";
+				INFOPLIST_FILE = "fantastic futuresTests/fantastic futuresTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		091801CD1546230D00EBD2AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/fantastic futures.app/fantastic futures";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "fantastic futures/fantastic futures-Prefix.pch";
+				INFOPLIST_FILE = "fantastic futuresTests/fantastic futuresTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		091801841546230C00EBD2AE /* Build configuration list for PBXProject "fantastic futures" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				091801C61546230D00EBD2AE /* Debug */,
+				091801C71546230D00EBD2AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		091801C81546230D00EBD2AE /* Build configuration list for PBXNativeTarget "fantastic futures" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				091801C91546230D00EBD2AE /* Debug */,
+				091801CA1546230D00EBD2AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		091801CB1546230D00EBD2AE /* Build configuration list for PBXNativeTarget "fantastic futuresTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				091801CC1546230D00EBD2AE /* Debug */,
+				091801CD1546230D00EBD2AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 091801811546230C00EBD2AE /* Project object */;
+}
