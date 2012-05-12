@@ -36,5 +36,11 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>DroidSans.ttf</string>
+		<string>DroidSans-Bold.ttf</string>
+		<string>DroidSansMono.ttf</string>
+	</array>
 </dict>
 </plist>

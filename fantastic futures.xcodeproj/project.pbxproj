@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09026C39155E009E0026CE2A /* DroidSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09026C36155E009E0026CE2A /* DroidSans-Bold.ttf */; };
+		09026C3A155E009E0026CE2A /* DroidSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09026C37155E009E0026CE2A /* DroidSans.ttf */; };
+		09026C3B155E009E0026CE2A /* DroidSansMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09026C38155E009E0026CE2A /* DroidSansMono.ttf */; };
 		0918018F1546230C00EBD2AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0918018E1546230C00EBD2AE /* UIKit.framework */; };
 		091801911546230C00EBD2AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091801901546230C00EBD2AE /* Foundation.framework */; };
 		091801931546230C00EBD2AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091801921546230C00EBD2AE /* CoreGraphics.framework */; };
@@ -32,6 +35,7 @@
 		0928036C15588BAC0043E527 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0928036315588BAB0043E527 /* SBJsonBase.m */; };
 		0928036D15588BAC0043E527 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 0928036515588BAB0043E527 /* NSString+SBJSON.m */; };
 		0928036E15588BAC0043E527 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 0928036715588BAB0043E527 /* NSObject+SBJSON.m */; };
+		09E11BCA155DE0F600F551BB /* SoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E11BC9155DE0F600F551BB /* SoundView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09026C36155E009E0026CE2A /* DroidSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DroidSans-Bold.ttf"; sourceTree = "<group>"; };
+		09026C37155E009E0026CE2A /* DroidSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroidSans.ttf; sourceTree = "<group>"; };
+		09026C38155E009E0026CE2A /* DroidSansMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroidSansMono.ttf; sourceTree = "<group>"; };
 		0918018A1546230C00EBD2AE /* fantastic futures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fantastic futures.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0918018E1546230C00EBD2AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		091801901546230C00EBD2AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -85,6 +92,8 @@
 		0928036715588BAB0043E527 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
 		0928036815588BAB0043E527 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
 		0928036915588BAC0043E527 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		09E11BC8155DE0F600F551BB /* SoundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundView.h; sourceTree = "<group>"; };
+		09E11BC9155DE0F600F551BB /* SoundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +123,9 @@
 		0918017F1546230C00EBD2AE = {
 			isa = PBXGroup;
 			children = (
+				09026C36155E009E0026CE2A /* DroidSans-Bold.ttf */,
+				09026C37155E009E0026CE2A /* DroidSans.ttf */,
+				09026C38155E009E0026CE2A /* DroidSansMono.ttf */,
 				091801941546230C00EBD2AE /* fantastic futures */,
 				091801BD1546230D00EBD2AE /* fantastic futuresTests */,
 				0918018D1546230C00EBD2AE /* Frameworks */,
@@ -160,6 +172,8 @@
 				091801A01546230C00EBD2AE /* MainStoryboard.storyboard */,
 				091801A31546230C00EBD2AE /* FirstViewController.h */,
 				091801A41546230C00EBD2AE /* FirstViewController.m */,
+				09E11BC8155DE0F600F551BB /* SoundView.h */,
+				09E11BC9155DE0F600F551BB /* SoundView.m */,
 				091801A61546230C00EBD2AE /* first.png */,
 				091801A81546230C00EBD2AE /* first@2x.png */,
 				091801AA1546230C00EBD2AE /* SecondViewController.h */,
@@ -281,6 +295,9 @@
 				091801A91546230C00EBD2AE /* first@2x.png in Resources */,
 				091801AE1546230C00EBD2AE /* second.png in Resources */,
 				091801B01546230C00EBD2AE /* second@2x.png in Resources */,
+				09026C39155E009E0026CE2A /* DroidSans-Bold.ttf in Resources */,
+				09026C3A155E009E0026CE2A /* DroidSans.ttf in Resources */,
+				09026C3B155E009E0026CE2A /* DroidSansMono.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +343,7 @@
 				0928036C15588BAC0043E527 /* SBJsonBase.m in Sources */,
 				0928036D15588BAC0043E527 /* NSString+SBJSON.m in Sources */,
 				0928036E15588BAC0043E527 /* NSObject+SBJSON.m in Sources */,
+				09E11BCA155DE0F600F551BB /* SoundView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

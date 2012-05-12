@@ -9,63 +9,56 @@
 #import "FirstViewController.h"
 
 @implementation FirstViewController
+@synthesize scrollView;
 @synthesize sounds;
 @synthesize titleLabel;
 @synthesize lengthLabel;
 @synthesize metaLabel;
 @synthesize descriptionLabel;
 @synthesize title;
-@synthesize responseData;
-@synthesize testLabel, soundsLoaded;
+@synthesize responseData, soundViews;
 
 
 
 
 - (void)loadView
 {
+    // declate a variable for the view
     UIView *view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
-    
-    soundsLoaded = false;
-    
+        
+    // start loading sounds from the api
     [self loadSounds];
     
-    [view setBackgroundColor: [UIColor yellowColor]];
+    // set background color
+    [view setBackgroundColor: [UIColor colorWithRed:247.0f/255.0f green:246.0f/255.0f blue:250.0f/255.0f alpha:1.0]];
     
-    CGRect labelFrame = CGRectMake( 10, 40, 100, 30 );
-    testLabel = [[UILabel alloc] initWithFrame: labelFrame];
-    [testLabel setText: @"My Label"];
-    [testLabel setTextColor: [UIColor orangeColor]];
-    [view addSubview: testLabel];    
+    // create a frame for the scroll view
+    CGRect scrollRect= CGRectMake(0, 85, 320, 320 );
     
+    // init scroll view and confifure it
+    scrollView=[[UIScrollView alloc] initWithFrame:scrollRect];
+    scrollView.pagingEnabled = YES;    
+    scrollView.showsHorizontalScrollIndicator = NO;
+    scrollView.showsVerticalScrollIndicator = NO;    
     
-    CGRect buttonFrame = CGRectMake( 10, 80, 100, 30 );
-    UIButton *button = [[UIButton alloc] initWithFrame: buttonFrame];
-    [button setTitle: @"My Button" forState: UIControlStateNormal];
-    [button setTitleColor: [UIColor redColor] forState: UIControlStateNormal];
-    [button setTitleColor: [UIColor blueColor] forState: UIControlStateSelected];
-    [view addSubview: button];    
-    [button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    // set a temporary content size (this will be changed dynamically when the sounds are loaded)
+    [scrollView setContentSize:CGSizeMake(640, 280)];    
+
+    // add scroll view to the parent view
+    [view addSubview: scrollView];
     
-    
-    // add subviews 
+    // assign view
     self.view = view;
     
-    
-    //[button release];
-    [testLabel release];    
+    // release stuff?
+    [scrollView release];    
     [view release];
 }
 
-     -(void)buttonTapped:(UIButton*)sender
-     {
-         NSLog(@"HUZZAH");
-         [sender setSelected:!sender.selected];
-     }
 
 -(void)loadSounds
 {
     NSLog(@"called loading sounds method");
-    NSLog(self.soundsLoaded ? @"Yes" : @"No");    
 	
     self.responseData = [NSMutableData data];
     
@@ -82,8 +75,7 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
     [responseData appendData:data];
-    soundsLoaded = true;
-    NSLog(self.soundsLoaded ? @"Yes" : @"No");         
+         
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
@@ -107,6 +99,12 @@
     // init sounds array in which we'll store the sounds from the api call
     sounds = [[NSMutableArray alloc] initWithObjects: nil];    
     
+    // init soundViews array in which we'll store the views for each sound
+    soundViews = [[NSMutableArray alloc] initWithObjects: nil];
+    
+    // resize scroll content size to fit all sounds
+    [scrollView setContentSize:CGSizeMake(230*[jsonSounds count], 280)];    
+    
     // iterate over sounds
     for (int i = 0; i < [jsonSounds count]; i++) 
     {
@@ -117,18 +115,31 @@
         Sound* sound = [[Sound alloc] init];
 
         sound.title         = [jsonSound objectForKey:@"title"];
-        sound.length        = (int) [jsonSound objectForKey:@"length"];
-        sound.author        = [jsonSound objectForKey:@"user_id"];
-        sound.location      = [jsonSound objectForKey:@"title"];
-        sound.description   = [jsonSound objectForKey:@"title"];  
+        sound.length        = [[jsonSound objectForKey:@"length"] intValue];
+        sound.author        = [jsonSound objectForKey:@"display_name"];
+        sound.location      = [jsonSound objectForKey:@"location"];
+        sound.description   = [jsonSound objectForKey:@"story"];  
         
         // add sound object to array
         [sounds addObject:sound];
         
-        NSLog(@"processed sound %i: %@", i, sound.title);
+        NSLog(@"%@", [jsonSound objectForKey:@"length"]);
+        NSLog(@"processed sound %i: %@", i, sound.title);        
+        
+        // add soundView to array
+        SoundView* soundView = [[SoundView alloc] init];
+        [soundViews addObject:soundView];
+        
+        soundView = [[SoundView alloc] init];
+        soundView.frame = CGRectMake(10 + i*320, 10, 300, 300);
+        [soundView populateSounds:[sounds objectAtIndex: i]];
+        [scrollView addSubview: soundView];        
     }
     
 }
+
+
+
 
 
 - (void)didReceiveMemoryWarning
@@ -140,30 +151,15 @@
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
-{
+{    
     [super viewDidLoad];
          
     //[self loadSounds];
     
-    // create a test sound
-    Sound* sound1 = [sounds objectAtIndex:10];    
-   
-    NSLog(@"view sound title: %@", sound1.title);
     
-    
-    // display sound data;
-    [testLabel setText: sound1.title];
-    
-    //testLabel.text = sound1.title;
-    titleLabel.text = sound1.title;
-    
-    lengthLabel.text = sound1.formatLength;
-    metaLabel.text = [NSString stringWithFormat:@"by %@ in %@)", sound1.author, sound1.location];    
-    descriptionLabel.text = sound1.description;
-    
-    
-    
+ 
 }
+
 
 - (void)viewDidUnload
 {
@@ -173,6 +169,7 @@
     [self setMetaLabel:nil];
     [self setDescriptionLabel:nil];
     [self setTitleLabel:nil];
+    [self setScrollView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -211,6 +208,7 @@
     [metaLabel release];
     [descriptionLabel release];
     [titleLabel release];
+    [scrollView release];
     [super dealloc];
 }
 

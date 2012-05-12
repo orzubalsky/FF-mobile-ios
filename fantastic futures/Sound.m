@@ -14,8 +14,13 @@
 
 -(NSString*) formatLength
 {
-    return @"0";
-    return (NSString*) length;
+    int minutes = length / 60;
+    int seconds = length % 60;
+    
+    NSString* minutesString = (minutes < 10) ? [NSString stringWithFormat:@"0%i", minutes] : [NSString stringWithFormat:@"%i", minutes];
+    NSString* secondsString = (seconds < 10) ? [NSString stringWithFormat:@"0%i", seconds] : [NSString stringWithFormat:@"%i", seconds];
+    
+    return [NSString stringWithFormat:@"%@:%@", minutesString, secondsString];
 }
 
 @end

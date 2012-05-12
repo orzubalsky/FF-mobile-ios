@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Sound.h"
+#import "SoundView.h"
 #import "JSON.h"
 #define kLatestKivaLoansURL @"http://test.fantasticfutures.fm/api/sounds"
 
@@ -15,16 +15,17 @@
 {
     NSMutableArray* sounds;
     NSMutableData* responseData;
-    bool soundsLoaded;
+    NSMutableArray* soundViews;
 }
 @property (retain, nonatomic) NSMutableData* responseData;
 @property(readwrite, strong) NSMutableArray* sounds;
-@property (retain, nonatomic) UILabel *testLabel;
 @property (retain, nonatomic) IBOutlet UITextView *lengthLabel;
 @property (retain, nonatomic) IBOutlet UITextView *metaLabel;
 @property (retain, nonatomic) IBOutlet UITextView *descriptionLabel;
 @property (retain, nonatomic) IBOutlet UITextView *titleLabel;
-@property(readwrite) bool soundsLoaded;
+@property (retain, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (retain, nonatomic) NSMutableArray* soundViews;
+
 
 -(void) loadSounds;
 
