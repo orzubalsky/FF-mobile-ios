@@ -32,6 +32,18 @@
     // set background color
     [view setBackgroundColor: [UIColor colorWithRed:247.0f/255.0f green:246.0f/255.0f blue:250.0f/255.0f alpha:1.0]];
     
+    // add/remove from composition button
+    CGRect filterButtonFrame = CGRectMake(270, 10, 40, 40 );
+    UIButton *filterButton = [[UIButton alloc] initWithFrame: filterButtonFrame];
+    UIImage *offStateImagae = [UIImage imageNamed:@"addButtonOff.png"];
+    UIImage *onStateImagae  = [UIImage imageNamed:@"addButtonOn.png"];
+    [filterButton setImage:offStateImagae forState: UIControlStateNormal];
+    [filterButton setImage:onStateImagae forState: UIControlStateSelected];
+    [view addSubview: filterButton];    
+    [filterButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    
     // create a frame for the scroll view
     CGRect scrollRect= CGRectMake(0, 85, 320, 320 );
     
@@ -53,6 +65,11 @@
     // release stuff?
     [scrollView release];    
     [view release];
+}
+
+-(void)buttonTapped:(UIButton*) sender
+{
+    [sender setSelected:!sender.selected];
 }
 
 
