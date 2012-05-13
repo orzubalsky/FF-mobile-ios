@@ -30,25 +30,22 @@
     frame = self.view.bounds;
     
     // declare main subviews
-    streamView = [[StreamingView alloc] initWithFrame:frame];
-    
+    streamView = [[StreamingView alloc] initWithFrame:frame];    
     filterView = [[FilteringView alloc] initWithFrame:frame];
-    filterView.backgroundColor = [UIColor blueColor];    
-    
     displayingStreamView = YES;
     
-    // add main subviews
+    // add main subview
     [containerView addSubview:streamView];
     
-    // add/remove from composition button
-    CGRect filterButtonFrame = CGRectMake(270, 10, 40, 40 );
-    UIButton *filterButton = [[UIButton alloc] initWithFrame: filterButtonFrame];
+    // switch view button
+    CGRect switchButtonFrame = CGRectMake(270, 10, 40, 40 );
+    UIButton *switchButton = [[UIButton alloc] initWithFrame: switchButtonFrame];
     UIImage *offStateImagae = [UIImage imageNamed:@"addButtonOff.png"];
     UIImage *onStateImagae  = [UIImage imageNamed:@"addButtonOn.png"];
-    [filterButton setImage:offStateImagae forState: UIControlStateNormal];
-    [filterButton setImage:onStateImagae forState: UIControlStateSelected];
-    [containerView addSubview: filterButton];    
-    [filterButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];    
+    [switchButton setImage:offStateImagae forState: UIControlStateNormal];
+    [switchButton setImage:onStateImagae forState: UIControlStateSelected];
+    [containerView addSubview: switchButton];    
+    [switchButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];    
     
     
     // assign view
