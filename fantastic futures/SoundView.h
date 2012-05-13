@@ -9,14 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import "Sound.h"
+#import "FFLabel.h"
 
 @interface SoundView : UIView
 
-@property (retain, nonatomic) UITextView *testLabel;
-@property (retain, nonatomic) UILabel *titleLabel;
-@property (retain, nonatomic) UILabel *metaLabel;
-@property (retain, nonatomic) UILabel *lengthLabel;
-@property (retain, nonatomic) UILabel *descriptionLabel;
+@property (retain, nonatomic) FFLabel *titleLabel;
+@property (retain, nonatomic) FFLabel *metaLabel;
+@property (retain, nonatomic) FFLabel *lengthLabel;
+@property (retain, nonatomic) FFLabel *descriptionLabel;
 
 -(void) populateSounds:(Sound*)sound;
 -(void)buttonTapped:(UIButton*)sender;
