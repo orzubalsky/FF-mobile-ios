@@ -11,11 +11,6 @@
 @implementation FirstViewController
 @synthesize scrollView;
 @synthesize sounds;
-@synthesize titleLabel;
-@synthesize lengthLabel;
-@synthesize metaLabel;
-@synthesize descriptionLabel;
-@synthesize title;
 @synthesize responseData, soundViews;
 
 
@@ -180,12 +175,6 @@
 
 - (void)viewDidUnload
 {
-    [self setTitle:nil];
-    [self setTitleLabel:nil];
-    [self setLengthLabel:nil];
-    [self setMetaLabel:nil];
-    [self setDescriptionLabel:nil];
-    [self setTitleLabel:nil];
     [self setScrollView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -219,12 +208,6 @@
 }
 
 - (void)dealloc {
-    [title release];
-    [titleLabel release];
-    [lengthLabel release];
-    [metaLabel release];
-    [descriptionLabel release];
-    [titleLabel release];
     [scrollView release];
     [super dealloc];
 }
