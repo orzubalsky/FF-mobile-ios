@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09026C39155E009E0026CE2A /* DroidSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09026C36155E009E0026CE2A /* DroidSans-Bold.ttf */; };
-		09026C3A155E009E0026CE2A /* DroidSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09026C37155E009E0026CE2A /* DroidSans.ttf */; };
-		09026C3B155E009E0026CE2A /* DroidSansMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09026C38155E009E0026CE2A /* DroidSansMono.ttf */; };
 		0918018F1546230C00EBD2AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0918018E1546230C00EBD2AE /* UIKit.framework */; };
 		091801911546230C00EBD2AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091801901546230C00EBD2AE /* Foundation.framework */; };
 		091801931546230C00EBD2AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091801921546230C00EBD2AE /* CoreGraphics.framework */; };
@@ -52,9 +49,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09026C36155E009E0026CE2A /* DroidSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DroidSans-Bold.ttf"; sourceTree = "<group>"; };
-		09026C37155E009E0026CE2A /* DroidSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroidSans.ttf; sourceTree = "<group>"; };
-		09026C38155E009E0026CE2A /* DroidSansMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroidSansMono.ttf; sourceTree = "<group>"; };
 		0918018A1546230C00EBD2AE /* fantastic futures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fantastic futures.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0918018E1546230C00EBD2AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		091801901546230C00EBD2AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -130,9 +124,6 @@
 		0918017F1546230C00EBD2AE = {
 			isa = PBXGroup;
 			children = (
-				09026C36155E009E0026CE2A /* DroidSans-Bold.ttf */,
-				09026C37155E009E0026CE2A /* DroidSans.ttf */,
-				09026C38155E009E0026CE2A /* DroidSansMono.ttf */,
 				091801941546230C00EBD2AE /* fantastic futures */,
 				091801BD1546230D00EBD2AE /* fantastic futuresTests */,
 				0918018D1546230C00EBD2AE /* Frameworks */,
@@ -314,9 +305,6 @@
 				091801A91546230C00EBD2AE /* first@2x.png in Resources */,
 				091801AE1546230C00EBD2AE /* second.png in Resources */,
 				091801B01546230C00EBD2AE /* second@2x.png in Resources */,
-				09026C39155E009E0026CE2A /* DroidSans-Bold.ttf in Resources */,
-				09026C3A155E009E0026CE2A /* DroidSans.ttf in Resources */,
-				09026C3B155E009E0026CE2A /* DroidSansMono.ttf in Resources */,
 				098B5A7E156056310087A04B /* addButtonOff.png in Resources */,
 				098B5A7F156056310087A04B /* addButtonOn.png in Resources */,
 			);

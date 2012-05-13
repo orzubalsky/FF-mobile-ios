@@ -19,10 +19,6 @@
 }
 @property (retain, nonatomic) NSMutableData* responseData;
 @property(readwrite, strong) NSMutableArray* sounds;
-@property (retain, nonatomic) IBOutlet UITextView *lengthLabel;
-@property (retain, nonatomic) IBOutlet UITextView *metaLabel;
-@property (retain, nonatomic) IBOutlet UITextView *descriptionLabel;
-@property (retain, nonatomic) IBOutlet UITextView *titleLabel;
 @property (retain, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (retain, nonatomic) NSMutableArray* soundViews;
 
