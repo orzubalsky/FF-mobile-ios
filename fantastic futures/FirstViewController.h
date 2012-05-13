@@ -10,11 +10,12 @@
 #import "FilteringView.h"
 #import "StreamingView.h"
 #import "JSON.h"
-#define soundsURL @"http://test.fantasticfutures.fm/api/sounds"
+#define tagsURL @"http://test.fantasticfutures.fm/api/tags"
 
 @interface FirstViewController : UIViewController
 {
     NSMutableArray* sounds;
+    NSMutableArray* tags;
     NSMutableData* responseData;
     NSMutableArray* soundViews;
     FilteringView* filterView;
@@ -24,11 +25,12 @@
 }
 @property (retain, nonatomic) NSMutableData* responseData;
 @property(readwrite, strong) NSMutableArray* sounds;
+@property(readwrite, strong) NSMutableArray* tags;
 @property (retain, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (retain, nonatomic) NSMutableArray* soundViews;
 @property (retain, nonatomic) FilteringView *filterView;
 @property (retain, nonatomic) StreamingView *streamView;
 
--(void) loadSounds;
+-(void) loadTags;
 
 @end

@@ -1,14 +1,14 @@
 //
-//  FilteringView.h
+//  Tag.m
 //  fantastic futures
 //
 //  Created by Or Zubalsky on 5/13/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "Tag.h"
 
-@interface FilteringView : UIView
+@implementation Tag
+@synthesize title, pk;
 
 @end

@@ -10,7 +10,7 @@
 
 @implementation FirstViewController
 @synthesize scrollView;
-@synthesize sounds;
+@synthesize sounds, tags;
 @synthesize responseData, soundViews;
 @synthesize filterView;
 @synthesize streamView;
@@ -19,6 +19,8 @@
 
 - (void)loadView
 {
+    [self loadTags];
+    
     // container view
     CGRect frame = [[UIScreen mainScreen] applicationFrame];
     UIView *containerView = [[UIView alloc] initWithFrame:frame];
@@ -68,13 +70,13 @@
     //[self.view bringSubviewToFront:self.swapButton];
 }
 
--(void)loadSounds
+-(void)loadTags
 {
-    NSLog(@"called loading sounds method");
+    NSLog(@"called loading tags method");
 	
     self.responseData = [NSMutableData data];
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:soundsURL]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:tagsURL]];
     [[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
 
@@ -105,47 +107,28 @@
     NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
 	self.responseData = nil;
     
-	NSArray* jsonSounds = [(NSDictionary*)[responseString JSONValue] objectForKey:@"sounds"];
+	NSArray* jsonTags = [(NSDictionary*)[responseString JSONValue] objectForKey:@"tags"];
 	[responseString release];
 
     // init sounds array in which we'll store the sounds from the api call
-    sounds = [[NSMutableArray alloc] initWithObjects: nil];    
-    
-    // init soundViews array in which we'll store the views for each sound
-    soundViews = [[NSMutableArray alloc] initWithObjects: nil];
-    
-    // resize scroll content size to fit all sounds
-    [scrollView setContentSize:CGSizeMake(230*[jsonSounds count], 280)];    
+    tags = [[NSMutableArray alloc] initWithObjects: nil];    
     
     // iterate over sounds
-    for (int i = 0; i < [jsonSounds count]; i++) 
+    for (int i = 0; i < [jsonTags count]; i++) 
     {
         // iterable json object from api call
-        NSDictionary* jsonSound = [jsonSounds objectAtIndex:i];
+        NSDictionary* jsonTag = [jsonTags objectAtIndex:i];
         
         // create sound object
-        Sound* sound = [[Sound alloc] init];
+        Tag* tag = [[Tag alloc] init];
 
-        sound.title         = [jsonSound objectForKey:@"title"];
-        sound.length        = [[jsonSound objectForKey:@"length"] intValue];
-        sound.author        = [jsonSound objectForKey:@"display_name"];
-        sound.location      = [jsonSound objectForKey:@"location"];
-        sound.description   = [jsonSound objectForKey:@"story"];  
+        tag.title           = [jsonTag objectForKey:@"title"];
+        tag.pk              = [[jsonTag objectForKey:@"pk"] intValue];
         
         // add sound object to array
-        [sounds addObject:sound];
+        [tags addObject:tag];
         
-        NSLog(@"%@", [jsonSound objectForKey:@"length"]);
-        NSLog(@"processed sound %i: %@", i, sound.title);        
-        
-        // add soundView to array
-        SoundView* soundView = [[SoundView alloc] init];
-        [soundViews addObject:soundView];
-        
-        soundView = [[SoundView alloc] init];
-        soundView.frame = CGRectMake(10 + i*320, 10, 300, 300);
-        [soundView populateSounds:[sounds objectAtIndex: i]];
-        [scrollView addSubview: soundView];        
+        NSLog(@"processed tag %i: %@", i, tag.title);        
     }
     
 }

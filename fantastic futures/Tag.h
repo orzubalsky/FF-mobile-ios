@@ -1,5 +1,5 @@
 //
-//  FilteringView.h
+//  Tag.h
 //  fantastic futures
 //
 //  Created by Or Zubalsky on 5/13/12.
@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Tag.h"
 
-@interface FilteringView : UIView
-
+@interface Tag : NSObject
+{
+    int pk;
+    NSString* title;
+}
+@property(readwrite, strong) NSString* title;
+@property(readwrite) int pk;
 @end
