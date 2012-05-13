@@ -12,20 +12,33 @@
 @synthesize scrollView;
 @synthesize sounds;
 @synthesize responseData, soundViews;
-
+@synthesize filterView;
+@synthesize streamView;
 
 
 
 - (void)loadView
 {
-    // declate a variable for the view
-    UIView *view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
-        
-    // start loading sounds from the api
-    [self loadSounds];
+    // container view
+    CGRect frame = [[UIScreen mainScreen] applicationFrame];
+    UIView *containerView = [[UIView alloc] initWithFrame:frame];
+    containerView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.view = containerView;
+    [containerView release];    
+
+    // frame for main subviews (stream / filter)
+    frame = self.view.bounds;
     
-    // set background color
-    [view setBackgroundColor: [UIColor colorWithRed:247.0f/255.0f green:246.0f/255.0f blue:250.0f/255.0f alpha:1.0]];
+    // declare main subviews
+    streamView = [[StreamingView alloc] initWithFrame:frame];
+    
+    filterView = [[FilteringView alloc] initWithFrame:frame];
+    filterView.backgroundColor = [UIColor blueColor];    
+    
+    displayingStreamView = YES;
+    
+    // add main subviews
+    [containerView addSubview:streamView];
     
     // add/remove from composition button
     CGRect filterButtonFrame = CGRectMake(270, 10, 40, 40 );
@@ -34,39 +47,29 @@
     UIImage *onStateImagae  = [UIImage imageNamed:@"addButtonOn.png"];
     [filterButton setImage:offStateImagae forState: UIControlStateNormal];
     [filterButton setImage:onStateImagae forState: UIControlStateSelected];
-    [view addSubview: filterButton];    
-    [filterButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [containerView addSubview: filterButton];    
+    [filterButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];    
     
-    
-    
-    // create a frame for the scroll view
-    CGRect scrollRect= CGRectMake(0, 85, 320, 320 );
-    
-    // init scroll view and confifure it
-    scrollView=[[UIScrollView alloc] initWithFrame:scrollRect];
-    scrollView.pagingEnabled = YES;    
-    scrollView.showsHorizontalScrollIndicator = NO;
-    scrollView.showsVerticalScrollIndicator = NO;    
-    
-    // set a temporary content size (this will be changed dynamically when the sounds are loaded)
-    [scrollView setContentSize:CGSizeMake(640, 280)];    
-
-    // add scroll view to the parent view
-    [view addSubview: scrollView];
     
     // assign view
-    self.view = view;
-    
-    // release stuff?
-    [scrollView release];    
-    [view release];
+    self.view = containerView;
 }
 
 -(void)buttonTapped:(UIButton*) sender
 {
-    [sender setSelected:!sender.selected];
+    if(displayingStreamView) {
+        [self.streamView removeFromSuperview];
+        [self.view addSubview:filterView];
+        
+        displayingStreamView = NO;
+    } else {
+        [self.filterView removeFromSuperview];
+        [self.view addSubview:streamView];
+        
+        displayingStreamView = YES;
+    }
+    //[self.view bringSubviewToFront:self.swapButton];
 }
-
 
 -(void)loadSounds
 {
@@ -74,7 +77,7 @@
 	
     self.responseData = [NSMutableData data];
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:kLatestKivaLoansURL]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:soundsURL]];
     [[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
 
