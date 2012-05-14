@@ -9,7 +9,7 @@
 #import "FilteringView.h"
 
 @implementation FilteringView
-@synthesize tagToggleButtons;
+@synthesize tagToggleButtons, containerView;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -25,24 +25,51 @@
 {
     // set background color
     [self setBackgroundColor: [UIColor colorWithRed:247.0f/255.0f green:246.0f/255.0f blue:250.0f/255.0f alpha:1.0]];
-    [self loadContent];
+    
+    // init scroll view and confifure it    
+    CGRect frame = [[UIScreen mainScreen] applicationFrame];
+    containerView = [[UIScrollView alloc] initWithFrame:frame];    
+    containerView.pagingEnabled = NO;    
+    containerView.showsHorizontalScrollIndicator = NO;
+    containerView.showsVerticalScrollIndicator = YES;        
+    // set a temporary content size (this will be changed dynamically when the sounds are loaded)
+    [containerView setContentSize:CGSizeMake(320, 580)];   
+    
+    [self addSubview:containerView];
 }
 
 
--(void) loadContent
+-(void) loadContent:(NSArray*) tags
 {    
+    float xCursor = 10.0;
+    float line = 0.0;     
+    bool newLine = NO;
+    
     // iterate over sounds
-    for (int i = 0; i < 10; i++) 
+    for (int i = 0; i < [tags count]; i++) 
     {
-        NSString* title = @"test";
+        Tag* tag = [tags objectAtIndex:i];
         
-        CGSize textSize = [title sizeWithFont:[UIFont fontWithName:@"DroidSans" size:10.0]];     
-        CGRect frame = CGRectMake(i + textSize.width + 5, i + 10, textSize.width + 10, textSize.height + 10);
+        CGSize textSize = [tag.title sizeWithFont:[UIFont fontWithName:@"DroidSans" size:20.0]];     
+        CGRect frame = CGRectMake(xCursor, line * 40.0, textSize.width + 10, textSize.height + 10);
+        
+        xCursor += textSize.width + 16.0;
+        newLine = NO;
+        
+        if (xCursor >= (290 - textSize.width)) 
+        {
+            line++;
+            xCursor = 10.0;
+            newLine = YES;
+        }        
         
         // create tag button object
-        TagToggleButton* tagButton = [[TagToggleButton alloc] initWithTitle:title frame:frame];
-        [self addSubview: tagButton];        
+        TagToggleButton* tagButton = [[TagToggleButton alloc] initWithTitle:tag.title frame:frame];
+        [containerView addSubview: tagButton];        
     }
+    
+    // resize scroll content size to fit all tags
+    [containerView setContentSize:CGSizeMake(320, (line+1)*45.0)];       
 }
 
 

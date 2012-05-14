@@ -21,7 +21,7 @@
         [self setBackgroundColor:[UIColor colorWithRed:73.0f/255.0f green:46.0f/255.0f blue:127.0f/255.0f alpha:0.35]];
         [self addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
 
-        self.titleLabel.font = [UIFont fontWithName:@"DroidSans" size:10.0];
+        self.titleLabel.font = [UIFont fontWithName:@"DroidSans" size:20.0];
         
         [self setTitle:title forState:UIControlStateNormal];
         [self setTitle:title forState:UIControlStateSelected];

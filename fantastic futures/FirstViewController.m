@@ -58,6 +58,7 @@
 {
     if(displayingStreamView) {
         [self.streamView removeFromSuperview];
+        [self.filterView loadContent:tags];
         [self.view addSubview:filterView];
         
         displayingStreamView = NO;
