@@ -21,6 +21,7 @@
     FilteringView* filterView;
     StreamingView* streamView;
     bool displayingStreamView;
+    UIButton* switchButton;
     
 }
 @property (retain, nonatomic) NSMutableData* responseData;
@@ -30,6 +31,7 @@
 @property (retain, nonatomic) NSMutableArray* soundViews;
 @property (retain, nonatomic) FilteringView *filterView;
 @property (retain, nonatomic) StreamingView *streamView;
+@property (retain, nonatomic) UIButton *switchButton;
 
 -(void) loadTags;
 

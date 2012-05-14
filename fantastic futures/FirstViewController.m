@@ -13,7 +13,7 @@
 @synthesize sounds, tags;
 @synthesize responseData, soundViews;
 @synthesize filterView;
-@synthesize streamView;
+@synthesize streamView, switchButton;
 
 
 
@@ -41,7 +41,7 @@
     
     // switch view button
     CGRect switchButtonFrame = CGRectMake(270, 10, 40, 40 );
-    UIButton *switchButton = [[UIButton alloc] initWithFrame: switchButtonFrame];
+    switchButton = [[UIButton alloc] initWithFrame: switchButtonFrame];
     UIImage *offStateImagae = [UIImage imageNamed:@"addButtonOff.png"];
     UIImage *onStateImagae  = [UIImage imageNamed:@"addButtonOn.png"];
     [switchButton setImage:offStateImagae forState: UIControlStateNormal];
@@ -64,11 +64,12 @@
         displayingStreamView = NO;
     } else {
         [self.filterView removeFromSuperview];
+        streamView = [[StreamingView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];            
         [self.view addSubview:streamView];
         
         displayingStreamView = YES;
     }
-    //[self.view bringSubviewToFront:self.swapButton];
+    [self.view bringSubviewToFront:self.switchButton];
 }
 
 -(void)loadTags
