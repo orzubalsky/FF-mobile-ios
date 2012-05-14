@@ -108,7 +108,7 @@
     soundViews = [[NSMutableArray alloc] initWithObjects: nil];
     
     // resize scroll content size to fit all sounds
-    [scrollView setContentSize:CGSizeMake(230*[jsonSounds count], 280)];    
+    [scrollView setContentSize:CGSizeMake(320*[jsonSounds count], 280)];    
     
     // iterate over sounds
     for (int i = 0; i < [jsonSounds count]; i++) 
