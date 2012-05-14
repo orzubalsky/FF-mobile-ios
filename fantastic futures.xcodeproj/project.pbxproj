@@ -36,8 +36,9 @@
 		098B5A7F156056310087A04B /* addButtonOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 098B5A7D156056310087A04B /* addButtonOn.png */; };
 		098B5A83156057CC0087A04B /* FFLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 098B5A82156057CC0087A04B /* FFLabel.m */; };
 		09BED9B315607D82002A6D70 /* StreamingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BED9B215607D82002A6D70 /* StreamingView.m */; };
-		09BED9B715607DE4002A6D70 /* FilteringView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BED9B615607DE4002A6D70 /* FilteringView.m */; };
 		09BED9BA15607EB6002A6D70 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BED9B915607EB6002A6D70 /* Tag.m */; };
+		09D9B00F1560817400BC55E6 /* TagToggleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D9B00E1560817400BC55E6 /* TagToggleButton.m */; };
+		09D9B01B15608B4000BC55E6 /* FilteringView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D9B01A15608B4000BC55E6 /* FilteringView.m */; };
 		09E11BCA155DE0F600F551BB /* SoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E11BC9155DE0F600F551BB /* SoundView.m */; };
 		09E805C015606DE700182349 /* DroidSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09E805BD15606DE700182349 /* DroidSans-Bold.ttf */; };
 		09E805C115606DE700182349 /* DroidSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09E805BE15606DE700182349 /* DroidSans.ttf */; };
@@ -101,10 +102,12 @@
 		098B5A82156057CC0087A04B /* FFLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFLabel.m; sourceTree = "<group>"; };
 		09BED9B115607D82002A6D70 /* StreamingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamingView.h; sourceTree = "<group>"; };
 		09BED9B215607D82002A6D70 /* StreamingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamingView.m; sourceTree = "<group>"; };
-		09BED9B515607DE4002A6D70 /* FilteringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilteringView.h; path = "fantastic futures/FilteringView.h"; sourceTree = "<group>"; };
-		09BED9B615607DE4002A6D70 /* FilteringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilteringView.m; path = "fantastic futures/FilteringView.m"; sourceTree = "<group>"; };
 		09BED9B815607EB6002A6D70 /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tag.h; sourceTree = "<group>"; };
 		09BED9B915607EB6002A6D70 /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tag.m; sourceTree = "<group>"; };
+		09D9B00D1560817400BC55E6 /* TagToggleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagToggleButton.h; sourceTree = "<group>"; };
+		09D9B00E1560817400BC55E6 /* TagToggleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagToggleButton.m; sourceTree = "<group>"; };
+		09D9B01915608B4000BC55E6 /* FilteringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilteringView.h; sourceTree = "<group>"; };
+		09D9B01A15608B4000BC55E6 /* FilteringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilteringView.m; sourceTree = "<group>"; };
 		09E11BC8155DE0F600F551BB /* SoundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundView.h; sourceTree = "<group>"; };
 		09E11BC9155DE0F600F551BB /* SoundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundView.m; sourceTree = "<group>"; };
 		09E805BD15606DE700182349 /* DroidSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DroidSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -139,8 +142,6 @@
 		0918017F1546230C00EBD2AE = {
 			isa = PBXGroup;
 			children = (
-				09BED9B515607DE4002A6D70 /* FilteringView.h */,
-				09BED9B615607DE4002A6D70 /* FilteringView.m */,
 				091801941546230C00EBD2AE /* fantastic futures */,
 				091801BD1546230D00EBD2AE /* fantastic futuresTests */,
 				0918018D1546230C00EBD2AE /* Frameworks */,
@@ -171,6 +172,8 @@
 		091801941546230C00EBD2AE /* fantastic futures */ = {
 			isa = PBXGroup;
 			children = (
+				09D9B01915608B4000BC55E6 /* FilteringView.h */,
+				09D9B01A15608B4000BC55E6 /* FilteringView.m */,
 				098B5A7B156056310087A04B /* assets */,
 				0928035F15588BAB0043E527 /* SBJsonWriter.m */,
 				0928036015588BAB0043E527 /* SBJsonWriter.h */,
@@ -188,6 +191,8 @@
 				091801A01546230C00EBD2AE /* MainStoryboard.storyboard */,
 				091801A31546230C00EBD2AE /* FirstViewController.h */,
 				091801A41546230C00EBD2AE /* FirstViewController.m */,
+				09D9B00D1560817400BC55E6 /* TagToggleButton.h */,
+				09D9B00E1560817400BC55E6 /* TagToggleButton.m */,
 				09BED9B115607D82002A6D70 /* StreamingView.h */,
 				09BED9B215607D82002A6D70 /* StreamingView.m */,
 				09E11BC8155DE0F600F551BB /* SoundView.h */,
@@ -382,8 +387,9 @@
 				09E11BCA155DE0F600F551BB /* SoundView.m in Sources */,
 				098B5A83156057CC0087A04B /* FFLabel.m in Sources */,
 				09BED9B315607D82002A6D70 /* StreamingView.m in Sources */,
-				09BED9B715607DE4002A6D70 /* FilteringView.m in Sources */,
 				09BED9BA15607EB6002A6D70 /* Tag.m in Sources */,
+				09D9B00F1560817400BC55E6 /* TagToggleButton.m in Sources */,
+				09D9B01B15608B4000BC55E6 /* FilteringView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
