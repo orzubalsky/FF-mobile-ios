@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Tag.h"
 
 @interface TagToggleButton : UIButton
+{
+    Tag* tag;
+}
+@property (retain, nonatomic) Tag* tag;
 
-- (id)initWithTitle:(NSString*)title frame:(CGRect)frame;
+- (id)initWithTag:(Tag*)tag frame:(CGRect)frame;
 
 @end

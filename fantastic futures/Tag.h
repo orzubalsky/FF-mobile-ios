@@ -10,9 +10,9 @@
 
 @interface Tag : NSObject
 {
-    int pk;
+    NSString* pk;
     NSString* title;
 }
 @property(readwrite, strong) NSString* title;
-@property(readwrite) int pk;
+@property(readwrite, strong) NSString* pk;
 @end

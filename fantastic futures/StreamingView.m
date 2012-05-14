@@ -12,12 +12,13 @@
 
 @synthesize scrollView;
 @synthesize sounds;
-@synthesize responseData, soundViews;
+@synthesize responseData, soundViews, url;
 
-- (id)initWithFrame:(CGRect)frame
+- (id)initWithUrl:(NSString*) _url frame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
+        self.url = _url;
         [self loadView];
     }
     return self;
@@ -60,7 +61,7 @@
 	
     self.responseData = [NSMutableData data];
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://test.fantasticfutures.fm/api/sounds"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     [[NSURLConnection alloc] initWithRequest:request delegate:self];
 }
 
@@ -127,8 +128,8 @@
         // add sound object to array
         [sounds addObject:sound];
         
-        NSLog(@"%@", [jsonSound objectForKey:@"length"]);
-        NSLog(@"processed sound %i: %@", i, sound.title);        
+        //NSLog(@"%@", [jsonSound objectForKey:@"length"]);
+        //NSLog(@"processed sound %i: %@", i, sound.title);        
         
         // add soundView to array
         SoundView* soundView = [[SoundView alloc] init];

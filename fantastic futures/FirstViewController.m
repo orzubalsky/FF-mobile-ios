@@ -32,7 +32,7 @@
     frame = self.view.bounds;
     
     // declare main subviews
-    streamView = [[StreamingView alloc] initWithFrame:frame];    
+    streamView = [[StreamingView alloc] initWithUrl:@"http://test.fantasticfutures.fm/api/sounds" frame:frame];    
     filterView = [[FilteringView alloc] initWithFrame:frame];
     displayingStreamView = YES;
     
@@ -56,18 +56,38 @@
 
 -(void)buttonTapped:(UIButton*) sender
 {
+    NSLog(@"displaying stream view: %d", displayingStreamView);
+    
+    
     if(displayingStreamView) {
+        NSLog(@"loading filter view");
+        
         [self.streamView removeFromSuperview];
         [self.filterView loadContent:tags];
         [self.view addSubview:filterView];
         
         displayingStreamView = NO;
     } else {
+        NSLog(@"loading stream view");
+                
+        NSMutableArray* filterTags = [self.filterView gatherFilterTags];
+        NSString* tagIds = [filterTags componentsJoinedByString:@","];
+        
+        NSLog(@"tag string: %@", tagIds);
+        
+        NSString* apiUrl = [NSString stringWithFormat:@"http://test.fantasticfutures.fm/api/sounds/tags/%@", tagIds];
+        
+        NSLog(@"url: %@", apiUrl);
+        
+        
         [self.filterView removeFromSuperview];
-        streamView = [[StreamingView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];            
+        CGRect frame = [[UIScreen mainScreen] applicationFrame];
+        frame = self.view.bounds;        
+        streamView = [[StreamingView alloc] initWithUrl:apiUrl frame:frame];    
         [self.view addSubview:streamView];
         
         displayingStreamView = YES;
+        
     }
     [self.view bringSubviewToFront:self.switchButton];
 }
@@ -125,7 +145,7 @@
         Tag* tag = [[Tag alloc] init];
 
         tag.title           = [jsonTag objectForKey:@"title"];
-        tag.pk              = [[jsonTag objectForKey:@"pk"] intValue];
+        tag.pk              = [jsonTag objectForKey:@"id"];
         
         // add sound object to array
         [tags addObject:tag];

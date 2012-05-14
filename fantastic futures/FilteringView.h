@@ -13,11 +13,12 @@
 @interface FilteringView : UIView
 {
     UIScrollView* containerView;
-    NSMutableArray* tagToggleButtons;    
+    NSMutableArray* tagToggleButtons;
 }
 @property (retain, nonatomic) NSMutableArray* tagToggleButtons;
 @property (retain, nonatomic) UIScrollView *containerView;
 
 -(void) loadView;
 -(void) loadContent:(NSArray*) tags;
+-(NSMutableArray*) gatherFilterTags;
 @end

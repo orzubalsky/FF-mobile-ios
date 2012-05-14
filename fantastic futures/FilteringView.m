@@ -45,6 +45,8 @@
     float line = 0.0;     
     bool newLine = NO;
     
+    tagToggleButtons = [[NSMutableArray alloc] init];
+    
     // iterate over sounds
     for (int i = 0; i < [tags count]; i++) 
     {
@@ -64,12 +66,36 @@
         }        
         
         // create tag button object
-        TagToggleButton* tagButton = [[TagToggleButton alloc] initWithTitle:tag.title frame:frame];
+        TagToggleButton* tagButton = [[TagToggleButton alloc] initWithTag:tag frame:frame];
+        
+        [tagToggleButtons addObject:tagButton];        
         [containerView addSubview: tagButton];        
     }
     
     // resize scroll content size to fit all tags
     [containerView setContentSize:CGSizeMake(320, (line+1)*45.0)];       
+}
+
+-(NSMutableArray*) gatherFilterTags 
+{
+    NSMutableArray* filterTags = [[NSMutableArray alloc] initWithObjects: nil];    
+    NSLog(@"filter tags array init");
+    NSLog(@"buttons: %i", [self.tagToggleButtons count]);
+    
+    
+    for (int i = 0; i < [self.tagToggleButtons count]; i++) 
+    {
+        TagToggleButton* button = [tagToggleButtons objectAtIndex:i];
+                
+        if (button.state == UIControlStateSelected) 
+        {
+            NSString* tagId = button.tag.pk;
+            NSLog(@"selected tag id: %@", tagId);            
+            [filterTags addObject:button.tag.pk];
+        }
+    }
+    
+    return filterTags;
 }
 
 
